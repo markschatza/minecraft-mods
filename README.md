@@ -11,13 +11,12 @@ That is enough to practice editing Java, running Minecraft, seeing errors, fixin
 
 ## Quick Start
 
-1. Install IntelliJ IDEA Community Edition.
-2. Install the JDK required by the current Fabric template. The GitHub workflow uses Java 25.
-3. Clone this repo from GitHub on each computer.
-4. Open the folder in IntelliJ.
-5. Let Gradle import the project.
-6. Run `gradlew runClient` on Windows, or `./gradlew runClient` on macOS/Linux.
-7. Create or open a world, then type `/academy quest`.
+1. Clone this repo from GitHub on each computer.
+2. Run the Windows or Linux setup script from [Setup Guide](docs/SETUP.md).
+3. Open the folder in IntelliJ.
+4. Let Gradle import the project.
+5. Run `gradlew runClient` on Windows, or `./gradlew runClient` on Linux.
+6. Create or open a world, then type `/academy quest`.
 
 If `java -version` says Java 8, Minecraft modding will not build correctly. Install a current JDK and make sure IntelliJ uses it for Gradle.
 

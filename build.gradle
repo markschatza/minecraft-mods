@@ -17,6 +17,16 @@ repositories {
 loom {
 	splitEnvironmentSourceSets()
 
+	runs {
+		client {
+			vmArgs "-Xms512M"
+			vmArgs "-Xmx2G"
+			vmArgs "-XX:ActiveProcessorCount=4"
+			vmArgs "-XX:CICompilerCount=2"
+			vmArgs "-XX:ReservedCodeCacheSize=256M"
+		}
+	}
+
 	mods {
 		"northlight_academy" {
 			sourceSet sourceSets.main
