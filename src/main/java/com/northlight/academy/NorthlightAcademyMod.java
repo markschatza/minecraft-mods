@@ -1,13 +1,13 @@
 package com.northlight.academy;
 
-import static net.minecraft.server.command.CommandManager.literal;
+import static net.minecraft.commands.Commands.literal;
 
 import java.util.List;
 import java.util.Random;
 
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.command.v2.CommandRegistrationCallback;
-import net.minecraft.text.Text;
+import net.minecraft.network.chat.Component;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -31,12 +31,12 @@ public class NorthlightAcademyMod implements ModInitializer {
 		CommandRegistrationCallback.EVENT.register((dispatcher, registryAccess, environment) -> dispatcher.register(
 				literal("academy")
 						.then(literal("hello").executes(context -> {
-							context.getSource().sendFeedback(() -> Text.literal("Welcome to Northlight Academy!"), false);
+							context.getSource().sendSuccess(() -> Component.literal("Welcome to Northlight Academy!"), false);
 							return 1;
 						}))
 						.then(literal("quest").executes(context -> {
 							String quest = randomQuest();
-							context.getSource().sendFeedback(() -> Text.literal("Coding quest: " + quest), false);
+							context.getSource().sendSuccess(() -> Component.literal("Coding quest: " + quest), false);
 							return 1;
 						}))
 		));

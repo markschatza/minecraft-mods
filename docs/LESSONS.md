@@ -35,8 +35,8 @@ You just reused code and changed one part of it.
 Add a method like this:
 
 ```java
-private static Text academyMessage(String message) {
-	return Text.literal("[Academy] " + message);
+private static Component academyMessage(String message) {
+	return Component.literal("[Academy] " + message);
 }
 ```
 
