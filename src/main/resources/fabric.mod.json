@@ -1,0 +1,31 @@
+{
+	"schemaVersion": 1,
+	"id": "northlight_academy",
+	"version": "${version}",
+	"name": "Northlight Academy",
+	"description": "A code-first Minecraft modding playground for learning Java one tiny feature at a time.",
+	"authors": [
+		"Northlight Academy"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/YOUR-GITHUB-USERNAME/minecraft-mods"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/northlight_academy/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.northlight.academy.NorthlightAcademyMod"
+		],
+		"client": [
+			"com.northlight.academy.client.NorthlightAcademyClient"
+		]
+	},
+	"depends": {
+		"fabricloader": ">=0.19.2",
+		"minecraft": "~1.21",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}
